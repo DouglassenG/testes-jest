@@ -10,7 +10,7 @@ Você está trabalhando em em alguns testes com Jest e Testing library React
 - Testing library React 
 
 ## Regras (USAR LINGUAGENS/TERMOS DETERMINÍSTICOS)
-NUNCA use testes que não complementem a mesma lógica utilizada atualmente.
+NUNCA use testes que não complementem a mesma lógica utilizada no projeto
 SEMPRE use a mesma lógica já aplicada até agora, tanto em @src\App.test.js, quanto em @src\App.js
 
 ## Tarefa
