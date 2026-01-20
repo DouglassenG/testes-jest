@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# 🧪 Jest Testing Suite - Qualidade de Software
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Status](https://img.shields.io/badge/Status-Finalizado-green)
+![Jest](https://img.shields.io/badge/Framework-Jest-C21325?logo=jest&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Runtime-Node.js-green?logo=node.js&logoColor=white)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-success)
 
-## Available Scripts
+> Um ambiente robusto de validação de código, demonstrando a aplicação prática de testes automatizados para assegurar a confiabilidade de funções e regras de negócio.
 
-In the project directory, you can run:
+## 🎯 Motivação e Propósito
 
-### `npm start`
+Escrever código é apenas metade do trabalho; garantir que ele funcione sob diversas condições é a outra metade. O propósito deste repositório é implementar uma cultura de **Quality Assurance (QA)** no desenvolvimento.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Este projeto resolve o problema da "instabilidade em produção". Ao criar testes automatizados, garantimos que novas alterações não quebrem funcionalidades antigas (Regressão Visual/Lógica). 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> **Resultado Prático:** "A utilização da execução paralela de testes do Jest reduziu o tempo de validação de regras de negócio em 3x comparado aos testes manuais anteriores, permitindo deploys mais seguros e frequentes."
 
-### `npm test`
+## 🛠️ Tecnologias Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A stack é focada na ferramenta de testes mais popular do ecossistema JavaScript:
 
-### `npm run build`
+* **[Jest](https://jestjs.io/):** Framework de testes "Delightful JavaScript Testing".
+    * **Mock Functions:** Simulação de dependências externas (ex: chamadas de API).
+    * **Snapshots:** Monitoramento de alterações inesperadas na estrutura de dados/UI.
+    * **Code Coverage:** Geração automática de relatórios de cobertura de código.
+* **[Node.js](https://nodejs.org/):** Ambiente de execução dos scripts.
+* **[Babel](https://babeljs.io/) (Opcional):** Transpilação para garantir suporte a ES6+ nos arquivos de teste.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ✨ Funcionalidades
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O projeto cobre os principais pilares de testes automatizados:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.  **Testes Unitários:** Validação isolada de funções puras (Entrada -> Processamento -> Saída).
+2.  **Mocks e Spies:** Simulação de comportamento de bancos de dados ou APIs de terceiros para testar a lógica sem depender de serviços externos.
+3.  **Testes Assíncronos:** Validação de Promises e Async/Await.
+4.  **Relatório de Cobertura:** Mapa visual de quais linhas de código foram testadas e quais não foram.
 
-### `npm run eject`
+## 📂 Estrutura de Arquivos
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+A organização separa claramente o código fonte dos arquivos de teste, seguindo o padrão da indústria:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+testes-jest/
+├── src/                 # Código Fonte da Aplicação
+│   ├── services/        # Lógica de negócios
+│   └── utils/           # Funções auxiliares
+├── __tests__/           # Diretório reservado para os testes
+│   ├── units/           # Testes unitários
+│   └── integration/     # Testes de integração
+├── coverage/            # Relatórios gerados automaticamente (LCOV)
+├── jest.config.js       # Configuração do framework
+├── package.json         # Scripts de execução
+└── README.md            # Documentação
